@@ -2,7 +2,6 @@ syntax = "proto3";
 
 option go_package = "/pb/bc";
 
-import "google/protobuf/wrappers.proto";
 import "google/protobuf/timestamp.proto";
 
 service ProjectConfigService {
@@ -18,17 +17,17 @@ message ProjectConfigResponse {
   string project_id = 2;
   int32 threshold = 3;
   int32 session_time = 4;
-  google.protobuf.StringValue host = 5;
-  google.protobuf.StringValue base_url = 6;
+  string host = 5;
+  string base_url = 6;
   int32 max_users_in_queue = 7;
   repeated string pages_to_apply = 8;
   google.protobuf.Timestamp queue_start = 9;
   google.protobuf.Timestamp queue_end = 10;
   string queue_page_style = 11;
-  google.protobuf.StringValue queue_html_page = 12;
-  google.protobuf.StringValue queue_page_base_color = 13;
-  google.protobuf.StringValue queue_page_title = 14;
-  google.protobuf.StringValue queue_page_logo = 15;
+  string queue_html_page = 12;
+  string queue_page_base_color = 13;
+  string queue_page_title = 14;
+  string queue_page_logo = 15;
   bool is_configure = 16;
   google.protobuf.Timestamp updated_at = 17;
 }
