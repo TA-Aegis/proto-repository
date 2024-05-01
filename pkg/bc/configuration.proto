@@ -20,7 +20,6 @@ message ProjectConfigResponse {
   string host = 5;
   string base_url = 6;
   int32 max_users_in_queue = 7;
-  repeated string pages_to_apply = 8;
   google.protobuf.Timestamp queue_start = 9;
   google.protobuf.Timestamp queue_end = 10;
   string queue_page_style = 11;
