@@ -9,7 +9,7 @@ service ProjectConfigService {
 }
 
 message ConfigRequest {
-  string host = 1;
+  string project_id = 1;
 }
 
 message ProjectConfigResponse {
