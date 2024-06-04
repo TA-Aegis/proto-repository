@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = "/pb/dd";
+
+import "google/protobuf/timestamp.proto";
+
+service ProjectConfigService {
+  rpc GetProjectConfig (ConfigRequest) returns (ProjectConfigResponse) {}
+}
+
+message ConfigRequest {
+  string project_id = 1;
+}
+
+message ProjectConfigResponse {
+  string id = 1;
+  string project_id = 2;
+  int32 threshold = 3;
+  int32 session_time = 4;
+  string host = 5;
+  string base_url = 6;
+  int32 max_users_in_queue = 7;
+  google.protobuf.Timestamp queue_start = 9;
+  google.protobuf.Timestamp queue_end = 10;
+  string queue_page_style = 11;
+  string queue_html_page = 12;
+  string queue_page_base_color = 13;
+  string queue_page_title = 14;
+  string queue_page_logo = 15;
+  bool is_configure = 16;
+  google.protobuf.Timestamp updated_at = 17;
+}

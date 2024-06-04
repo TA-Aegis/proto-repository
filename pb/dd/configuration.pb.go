@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.33.0
 // 	protoc        v5.26.1
-// source: bc/configuration.proto
+// source: dd/configuration.proto
 
-package bc
+package dd
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -32,7 +32,7 @@ type ConfigRequest struct {
 func (x *ConfigRequest) Reset() {
 	*x = ConfigRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_bc_configuration_proto_msgTypes[0]
+		mi := &file_dd_configuration_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -45,7 +45,7 @@ func (x *ConfigRequest) String() string {
 func (*ConfigRequest) ProtoMessage() {}
 
 func (x *ConfigRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_bc_configuration_proto_msgTypes[0]
+	mi := &file_dd_configuration_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -58,7 +58,7 @@ func (x *ConfigRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ConfigRequest.ProtoReflect.Descriptor instead.
 func (*ConfigRequest) Descriptor() ([]byte, []int) {
-	return file_bc_configuration_proto_rawDescGZIP(), []int{0}
+	return file_dd_configuration_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *ConfigRequest) GetProjectId() string {
@@ -94,7 +94,7 @@ type ProjectConfigResponse struct {
 func (x *ProjectConfigResponse) Reset() {
 	*x = ProjectConfigResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_bc_configuration_proto_msgTypes[1]
+		mi := &file_dd_configuration_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -107,7 +107,7 @@ func (x *ProjectConfigResponse) String() string {
 func (*ProjectConfigResponse) ProtoMessage() {}
 
 func (x *ProjectConfigResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_bc_configuration_proto_msgTypes[1]
+	mi := &file_dd_configuration_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -120,7 +120,7 @@ func (x *ProjectConfigResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ProjectConfigResponse.ProtoReflect.Descriptor instead.
 func (*ProjectConfigResponse) Descriptor() ([]byte, []int) {
-	return file_bc_configuration_proto_rawDescGZIP(), []int{1}
+	return file_dd_configuration_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *ProjectConfigResponse) GetId() string {
@@ -235,10 +235,10 @@ func (x *ProjectConfigResponse) GetUpdatedAt() *timestamppb.Timestamp {
 	return nil
 }
 
-var File_bc_configuration_proto protoreflect.FileDescriptor
+var File_dd_configuration_proto protoreflect.FileDescriptor
 
-var file_bc_configuration_proto_rawDesc = []byte{
-	0x0a, 0x16, 0x62, 0x63, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x75, 0x72, 0x61, 0x74, 0x69,
+var file_dd_configuration_proto_rawDesc = []byte{
+	0x0a, 0x16, 0x64, 0x64, 0x2f, 0x63, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x75, 0x72, 0x61, 0x74, 0x69,
 	0x6f, 0x6e, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74,
 	0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x2e, 0x0a, 0x0d, 0x43, 0x6f, 0x6e,
@@ -291,29 +291,29 @@ var file_bc_configuration_proto_rawDesc = []byte{
 	0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x12, 0x0e, 0x2e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52,
 	0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x16, 0x2e, 0x50, 0x72, 0x6f, 0x6a, 0x65, 0x63, 0x74,
 	0x43, 0x6f, 0x6e, 0x66, 0x69, 0x67, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x22, 0x00,
-	0x42, 0x08, 0x5a, 0x06, 0x2f, 0x70, 0x62, 0x2f, 0x62, 0x63, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x42, 0x08, 0x5a, 0x06, 0x2f, 0x70, 0x62, 0x2f, 0x64, 0x64, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x33,
 }
 
 var (
-	file_bc_configuration_proto_rawDescOnce sync.Once
-	file_bc_configuration_proto_rawDescData = file_bc_configuration_proto_rawDesc
+	file_dd_configuration_proto_rawDescOnce sync.Once
+	file_dd_configuration_proto_rawDescData = file_dd_configuration_proto_rawDesc
 )
 
-func file_bc_configuration_proto_rawDescGZIP() []byte {
-	file_bc_configuration_proto_rawDescOnce.Do(func() {
-		file_bc_configuration_proto_rawDescData = protoimpl.X.CompressGZIP(file_bc_configuration_proto_rawDescData)
+func file_dd_configuration_proto_rawDescGZIP() []byte {
+	file_dd_configuration_proto_rawDescOnce.Do(func() {
+		file_dd_configuration_proto_rawDescData = protoimpl.X.CompressGZIP(file_dd_configuration_proto_rawDescData)
 	})
-	return file_bc_configuration_proto_rawDescData
+	return file_dd_configuration_proto_rawDescData
 }
 
-var file_bc_configuration_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_bc_configuration_proto_goTypes = []interface{}{
+var file_dd_configuration_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_dd_configuration_proto_goTypes = []interface{}{
 	(*ConfigRequest)(nil),         // 0: ConfigRequest
 	(*ProjectConfigResponse)(nil), // 1: ProjectConfigResponse
 	(*timestamppb.Timestamp)(nil), // 2: google.protobuf.Timestamp
 }
-var file_bc_configuration_proto_depIdxs = []int32{
+var file_dd_configuration_proto_depIdxs = []int32{
 	2, // 0: ProjectConfigResponse.queue_start:type_name -> google.protobuf.Timestamp
 	2, // 1: ProjectConfigResponse.queue_end:type_name -> google.protobuf.Timestamp
 	2, // 2: ProjectConfigResponse.updated_at:type_name -> google.protobuf.Timestamp
@@ -326,13 +326,13 @@ var file_bc_configuration_proto_depIdxs = []int32{
 	0, // [0:3] is the sub-list for field type_name
 }
 
-func init() { file_bc_configuration_proto_init() }
-func file_bc_configuration_proto_init() {
-	if File_bc_configuration_proto != nil {
+func init() { file_dd_configuration_proto_init() }
+func file_dd_configuration_proto_init() {
+	if File_dd_configuration_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_bc_configuration_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_dd_configuration_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ConfigRequest); i {
 			case 0:
 				return &v.state
@@ -344,7 +344,7 @@ func file_bc_configuration_proto_init() {
 				return nil
 			}
 		}
-		file_bc_configuration_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_dd_configuration_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ProjectConfigResponse); i {
 			case 0:
 				return &v.state
@@ -361,18 +361,18 @@ func file_bc_configuration_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_bc_configuration_proto_rawDesc,
+			RawDescriptor: file_dd_configuration_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_bc_configuration_proto_goTypes,
-		DependencyIndexes: file_bc_configuration_proto_depIdxs,
-		MessageInfos:      file_bc_configuration_proto_msgTypes,
+		GoTypes:           file_dd_configuration_proto_goTypes,
+		DependencyIndexes: file_dd_configuration_proto_depIdxs,
+		MessageInfos:      file_dd_configuration_proto_msgTypes,
 	}.Build()
-	File_bc_configuration_proto = out.File
-	file_bc_configuration_proto_rawDesc = nil
-	file_bc_configuration_proto_goTypes = nil
-	file_bc_configuration_proto_depIdxs = nil
+	File_dd_configuration_proto = out.File
+	file_dd_configuration_proto_rawDesc = nil
+	file_dd_configuration_proto_goTypes = nil
+	file_dd_configuration_proto_depIdxs = nil
 }

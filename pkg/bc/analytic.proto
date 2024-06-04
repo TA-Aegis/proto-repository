@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "/pb/bc";
+
+package analytic;
+
+import "google/protobuf/timestamp.proto";
+
+service AnalyticService {
+    rpc StreamRealtimeData(AnalyticRequest) returns (stream AnalyticData);
+}
+
+message AnalyticRequest {
+    string project_id = 1;
+}
+
+message AnalyticData {
+    string project_id = 1;
+    int32 total_users_in_queue = 2;
+    int32 total_users_in_room = 3;
+    int32 total_users = 4;
+    google.protobuf.Timestamp timestamp = 5;
+}
